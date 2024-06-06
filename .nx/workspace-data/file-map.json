@@ -1,0 +1,239 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.2.0",
+  "deps": {
+    "@jest/types": "29.6.3",
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5",
+    "nx": "19.2.0"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "package-lock.json",
+        "hash": "2326110811434694131"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "9781136464145295905"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2942568828950074949"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "4306701300552632428"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17832030967254816539"
+      },
+      {
+        "file": ".github/workflows/ci-build-synth-lint-test.yml",
+        "hash": "9398753211857688779"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16400330353019120553"
+      },
+      {
+        "file": "package.json",
+        "hash": "4247502193710538302"
+      }
+    ],
+    "projectFileMap": {
+      "@app/utility": [
+        {
+          "file": "libs/utility/jest.config.ts",
+          "hash": "11589211477266429259"
+        },
+        {
+          "file": "libs/utility/package.json",
+          "hash": "5572801573560916677",
+          "deps": [
+            "npm:@types/node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/utility/src/utility.service.ts",
+          "hash": "7266301218735589385"
+        },
+        {
+          "file": "libs/utility/test/utility.service.spec.ts",
+          "hash": "4898609741204199665"
+        },
+        {
+          "file": "libs/utility/tsconfig.json",
+          "hash": "13101040372141814263"
+        }
+      ],
+      "@app/backend": [
+        {
+          "file": "apps/backend/jest.config.ts",
+          "hash": "11589211477266429259"
+        },
+        {
+          "file": "apps/backend/package.json",
+          "hash": "11863748269358392766",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/cors",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:jest",
+            "npm:ts-jest",
+            "npm:ts-mockito",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:cors",
+            "npm:dotenv",
+            "npm:express",
+            "npm:tslog",
+            "npm:ts-node",
+            "@app/model",
+            "@app/utility"
+          ]
+        },
+        {
+          "file": "apps/backend/src/index.ts",
+          "hash": "7508162959990090107"
+        },
+        {
+          "file": "apps/backend/test/index.spec.ts",
+          "hash": "10376389959541130822"
+        },
+        {
+          "file": "apps/backend/tsconfig.json",
+          "hash": "9760756698383528286"
+        }
+      ],
+      "@app/frontend": [
+        {
+          "file": "apps/frontend/angular.json",
+          "hash": "12177688605222169443"
+        },
+        {
+          "file": "apps/frontend/karma.conf.js",
+          "hash": "7885879358692943639"
+        },
+        {
+          "file": "apps/frontend/package.json",
+          "hash": "15525905989745631407",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@types/jasmine",
+            "npm:@types/luxon",
+            "npm:@types/node",
+            "npm:@types/uuid",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:karma-spec-reporter",
+            "npm:typescript",
+            "npm:@angular/animations",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:normalize.css",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:tslog",
+            "npm:zone.js",
+            "@app/model"
+          ]
+        },
+        {
+          "file": "apps/frontend/src/app/app.component.html",
+          "hash": "15844076110057299630"
+        },
+        {
+          "file": "apps/frontend/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/frontend/src/app/app.component.spec.ts",
+          "hash": "10185994026958579983"
+        },
+        {
+          "file": "apps/frontend/src/app/app.component.ts",
+          "hash": "1959234830549224763"
+        },
+        {
+          "file": "apps/frontend/src/app/app.config.ts",
+          "hash": "5580930567809266420"
+        },
+        {
+          "file": "apps/frontend/src/app/app.routes.ts",
+          "hash": "809736233805555256"
+        },
+        {
+          "file": "apps/frontend/src/app/services/calculate.service.ts",
+          "hash": "12131765929182488648"
+        },
+        {
+          "file": "apps/frontend/src/app/services/status.service.ts",
+          "hash": "11518299504797192192"
+        },
+        {
+          "file": "apps/frontend/src/index.html",
+          "hash": "3919539630660199675"
+        },
+        {
+          "file": "apps/frontend/src/main.ts",
+          "hash": "4169901790405087765"
+        },
+        {
+          "file": "apps/frontend/src/styles.scss",
+          "hash": "2917954890128038984"
+        },
+        {
+          "file": "apps/frontend/tsconfig.app.json",
+          "hash": "13119632651406065538"
+        },
+        {
+          "file": "apps/frontend/tsconfig.json",
+          "hash": "11774871774654775201"
+        },
+        {
+          "file": "apps/frontend/tsconfig.spec.json",
+          "hash": "5122839733245053999"
+        }
+      ],
+      "@app/model": [
+        {
+          "file": "libs/model/jest.config.ts",
+          "hash": "11589211477266429259"
+        },
+        {
+          "file": "libs/model/package.json",
+          "hash": "10023673652354415505",
+          "deps": [
+            "npm:@types/node",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/model/src/Status.ts",
+          "hash": "7710517872745641627"
+        },
+        {
+          "file": "libs/model/tsconfig.json",
+          "hash": "13101040372141814263"
+        }
+      ]
+    }
+  }
+}

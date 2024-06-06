@@ -5,7 +5,8 @@
   "devDependencies": {
     "@jest/types": "29.6.3",
     "@types/node": "^20.14.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "nx": "19.2.0"
   },
   "workspaces": [
     "apps/*",

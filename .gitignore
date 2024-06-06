@@ -145,3 +145,5 @@ test-results
 # ng
 .angular
 /.angular/cache
+
+.nx/cache
