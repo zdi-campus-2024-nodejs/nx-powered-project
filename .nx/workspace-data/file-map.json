@@ -12,36 +12,36 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "package-lock.json",
-        "hash": "2326110811434694131"
+        "file": "tsconfig.base.json",
+        "hash": "16400330353019120553"
       },
       {
         "file": "LICENSE",
         "hash": "9781136464145295905"
       },
       {
-        "file": "nx.json",
-        "hash": "2942568828950074949"
-      },
-      {
         "file": "jest.config.ts",
         "hash": "4306701300552632428"
+      },
+      {
+        "file": "package.json",
+        "hash": "4247502193710538302"
       },
       {
         "file": ".gitignore",
         "hash": "17832030967254816539"
       },
       {
+        "file": "nx.json",
+        "hash": "2942568828950074949"
+      },
+      {
         "file": ".github/workflows/ci-build-synth-lint-test.yml",
-        "hash": "9398753211857688779"
+        "hash": "6269660189170989233"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "16400330353019120553"
-      },
-      {
-        "file": "package.json",
-        "hash": "4247502193710538302"
+        "file": "package-lock.json",
+        "hash": "2326110811434694131"
       }
     ],
     "projectFileMap": {

@@ -1,0 +1,50 @@
+name: ci - compile, test, build
+on:
+  pull_request:
+    branches: [dev]
+
+env:
+  NX_REJECT_UNKNOWN_LOCAL_CACHE: 0
+jobs:
+  ci-build-synth-lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: node-modules-cache
+        with:
+          path: |
+            ~/.npm
+            node_modules
+            .nx
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install project dependencies
+        run: node --version && npm --version && npm ci
+
+      - name: Compile application modules
+        run: npx nx affected -t compile --base=origin/dev --head=HEAD --parallel=1 --configuration=ci
+
+      - name: Test application modules
+        env:
+          NODE_OPTIONS: '--max-old-space-size=8192'
+        run: npx nx affected -t test --base=origin/dev --head=HEAD
+
+      - name: Build frontend application modules
+        run: npx nx run-many -t build -p @app/frontend
