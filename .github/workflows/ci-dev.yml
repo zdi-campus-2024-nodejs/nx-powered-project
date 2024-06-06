@@ -1,14 +1,19 @@
-name: ci - pr - compile, test, build
+name: ci - dev - compile, test, build
 on:
+  push:
+    branches:
+      - dev
   pull_request:
-    branches: [dev]
 
+permissions:
+  actions: read
+  contents: read
 env:
   NX_REJECT_UNKNOWN_LOCAL_CACHE: 0
-  NX_BASE: origin/dev
+  NX_BASE: origin/dev~1
   NX_HEAD: HEAD
 jobs:
-  pr:
+  dev:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,13 +45,5 @@ jobs:
       - name: Install project dependencies
         run: node --version && npm --version && npm ci
 
-      - name: Compile application modules
-        run: npx nx affected -t compile --parallel=1
-
-      - name: Test application modules
-        env:
-          NODE_OPTIONS: '--max-old-space-size=8192'
-        run: npx nx affected -t test
-
-      - name: Build frontend application module
-        run: npx nx affected -t build -p @app/frontend
+      - name: Test and Build application modules
+        run: npx nx affected -t compile test build
