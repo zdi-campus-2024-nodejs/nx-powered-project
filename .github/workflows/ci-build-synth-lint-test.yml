@@ -49,4 +49,4 @@ jobs:
         run: npx nx affected -t test
 
       - name: Build frontend application module
-        run: npx nx affected -t build -p @app/frontend
+        run: npx nx affected -t build
