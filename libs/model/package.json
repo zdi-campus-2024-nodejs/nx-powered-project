@@ -1,0 +1,17 @@
+{
+  "name": "@app/model",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf test-results",
+    "compile": "tsc",
+    "start": "npx tsx src/index.ts",
+    "test": "jest --passWithNoTests --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+  }
+}
