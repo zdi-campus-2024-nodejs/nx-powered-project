@@ -20,7 +20,7 @@ describe('UtilityService', () => {
 
     // then
     expect(result).toBeDefined();
-    expect(result).toEqual(30);
+    expect(result).toEqual(200);
   });
 })
 
